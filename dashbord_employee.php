@@ -191,6 +191,8 @@ if (isset($_SESSION['user_id'])) {
                     <div class="chat_box" id="chat_box"></div>
                     <form action="#">
                         <div class="form_groupe">
+                            <input type="hidden" id="current-user-id" value="<?php echo $_SESSION['user_id']; ?>">
+                            <input type="hidden" id="receiver-user-id" value="<!-- Receiver ID here -->">
                             <input type="text" id="chat-input" placeholder="Taper...">
                             <button type="submit" class="btn_send"><i class='bx bx-send'></i></button>
                         </div>
@@ -284,6 +286,7 @@ if (isset($_SESSION['user_id'])) {
     <script src="dashbord_employee.js?v=<?= time(); ?>"></script>
     <script src="messagerie.js?v=<?= time(); ?>"></script>
     <script src="dashboard_chat.js?v=<?= time(); ?>"></script>
+    <script src="chat.js"></script>
     <script>
         const CURRENT_USER_ID = <?php echo $_SESSION['user_id']; ?>;
     </script>
